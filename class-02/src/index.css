@@ -1,0 +1,22 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+}
+h3{
+font-size: 20px;
+color: blue;
+margin-left: 70px;
+}
+button{
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 18px;
+    background-color: crimson;
+    color: white;
+
+}
