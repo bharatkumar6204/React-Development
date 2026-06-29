@@ -6,44 +6,37 @@ const App = () => {
 
   const submitHandler = (e)=>{
     e.preventDefault()
-    console.log({name,email});
+    console.log('form submited',{name,email});
     setName('')
     setEmail('')
     
   }
   return (
-    <div className="h-screen flex justify-center items-center">
-      <div className="w-80 border-2 p-5 rounded">
-        <form onSubmit={(e)=>{
-          submitHandler(e)
-        }}>
-          <label className="text-xl text-red-600">Name</label><br />
-          <input
-          onChange={(e)=>{
-            setName(e.target.value)
-          }}
-          value={name}
-            type="text"
-            placeholder="Enter your name"
-            className="border w-full p-2 mb-4"
-          />
+    <div>
+      <form onSubmit={(e)=>{
+        submitHandler(e)
+      }} >
+        <label >Name</label><br />
+        <input 
+        value={name}
+        onChange={(e)=>{
+          setName(e.target.value)
+        }}
+        type="text" 
+        placeholder='Enter name'
+        /><br />
+        <label >Email</label><br />
+        <input
+        value={email}
+        onChange={(e)=>{
+          setEmail(e.target.value)
+        }}
+         type="text"
+          placeholder='Enter Email'
+         /> <br />
 
-          <label className="text-xl text-red-600">Email</label><br />
-          <input
-          value={email}
-          onChange={(e)=>{
-            setEmail(e.target.value)
-          }}
-            type="email"
-            placeholder="Enter your email"
-            className="border w-full p-2 mb-4"
-          />
-
-          <button className="bg-blue-500 text-white px-4 py-2 rounded">
-            Submit
-          </button>
-        </form>
-      </div>
+         <button>Submit</button>
+      </form>
     </div>
   )
 }
